@@ -6,11 +6,17 @@ This is a generative art application developed in [Processing](http://processing
 ### Keyboard Controls
 
 S - Save your composition
+
 P - Add particles, 50 per press
+
 A - Add an attractor
+
 R - Add a repulsor
+
 Q - Clear all particles
+
 SPACE - Clear all attractors and repulsors
+
 C - Clear everything and start over.
 
 ### Sample Images
