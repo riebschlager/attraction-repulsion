@@ -17,7 +17,7 @@ Q - Clear all particles
 
 SPACE - Clear all attractors and repulsors
 
-C - Clear everything and start over.
+C - Clear everything and start over
 
 ### Sample Images
 
