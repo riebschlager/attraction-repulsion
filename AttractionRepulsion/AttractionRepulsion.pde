@@ -16,7 +16,7 @@ void setup() {
   size(floor(canvas.width / 2), floor(canvas.height / 2));
   background = loadImage("data/img/background.png");
   if (background.width != width || background.height != height) background.resize(width, height);
-  src = loadImage("http://img.ffffound.com/static-data/assets/6/75422fcf530d89029bfeb8b640efd71eb2564f06_m.png");
+  src = loadImage("http://img.ffffound.com/static-data/assets/6/d00fb8ad1b4164cc78474c4cd1726d92e9c3aad5_m.jpg");
   src.loadPixels();
   physics = new VerletPhysics2D();
   physics.setDrag(0.75f);
@@ -40,6 +40,7 @@ void draw() {
     strokeWeight(0.5);
     ellipse(a.position.x, a.position.y, 5, 5);
   }
+  //saveFrameForVideo();
 }
 
 void addParticle() {
@@ -77,6 +78,11 @@ void render() {
     //if (y1 < 0 || y1 > canvas.height || x1 < 0 || x1 > canvas.width) physics.removeParticle(p);
   }
   canvas.endDraw();
+}
+
+void saveFrameForVideo() {
+  String fileName = nf(frameCount, 5) + ".tif";
+  saveFrame("data/video/" + fileName);
 }
 
 void keyPressed() {
