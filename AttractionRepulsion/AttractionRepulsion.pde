@@ -10,13 +10,13 @@ PImage background;
 Vec2D mousePos;
 
 void setup() {
+  size(1920, 1080);
   canvas = createGraphics(1920, 1080);
   canvas.beginDraw();
   canvas.endDraw();
-  size(floor(canvas.width / 2), floor(canvas.height / 2));
   background = loadImage("data/img/background.png");
   if (background.width != width || background.height != height) background.resize(width, height);
-  src = loadImage("http://img.ffffound.com/static-data/assets/6/d00fb8ad1b4164cc78474c4cd1726d92e9c3aad5_m.jpg");
+  src = loadImage("data/img/foreground.jpg");
   src.loadPixels();
   physics = new VerletPhysics2D();
   physics.setDrag(0.75f);
@@ -107,4 +107,3 @@ void keyPressed() {
     img.save("data/output/composition-" + month() + "-" + day() + "-" + hour() + "-" + minute() + "-" + second() + ".tif");
   }
 }
-
